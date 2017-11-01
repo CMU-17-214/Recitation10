@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Recitation10.iml" filepath="$PROJECT_DIR$/Recitation10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Recitation10_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Recitation10_main.iml" group="Recitation10" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Recitation10_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Recitation10_test.iml" group="Recitation10" />
+    </modules>
+  </component>
+</project>
