@@ -96,8 +96,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isGameOver() {
-//        System.out.println("here");
-
         // Checks that array is properly sorted
         for (int i = 0; i < 9; i++) {
             Integer j = Integer.parseInt(framework.getSquare(i+1, 0));
@@ -114,9 +112,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public void onGameClosed() {
-        System.out.println(move);
+        //do nothing
     }
 }
-SortWithSwapsPlugin.java
-        Open with
-        Displaying SortWithSwapsPlugin.java.
