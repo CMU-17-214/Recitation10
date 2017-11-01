@@ -91,7 +91,6 @@ public class MoneyDoorPlugin implements GamePlugin {
                 return false;
             }
         }
-//System.out.println("game is over");
         return true;
     }
 
