@@ -19,7 +19,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private GameFramework framework = null;
 
     // The last number clicked, which is to be swapped with the next number clicked
-    private int last = -1;
+    private int last = -2;
 
     //The number of swaps the user has made
     static Integer count = null;
