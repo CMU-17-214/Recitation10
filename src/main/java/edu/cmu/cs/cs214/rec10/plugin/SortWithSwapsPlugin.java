@@ -9,7 +9,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private int ONE = 1;
     private int TEN = 10;
 
-    // Describes whether the current move is over
+    // Describes whether the current move is
     public Boolean move = false;
 
     // An array of the numbers 1-10
