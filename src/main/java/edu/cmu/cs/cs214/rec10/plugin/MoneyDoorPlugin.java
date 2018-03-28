@@ -3,7 +3,7 @@ package edu.cmu.cs.cs214.rec10.plugin;
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 import edu.cmu.cs.cs214.rec10.framework.core.Player;
-
+//Change
 import java.util.*;
 
 public class MoneyDoorPlugin implements GamePlugin {
