@@ -106,6 +106,6 @@ public class MoneyDoorPlugin implements GamePlugin {
     }
 
     public void onGameClosed() {
-        System.out.println("closed :(");
+        System.out.println("closed :(((((");
     }
 }
