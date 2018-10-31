@@ -74,7 +74,7 @@ public class MoneyDoorPlugin implements GamePlugin {
 
     @Override
     public boolean isMoveOver() {
-        return isGameOver() || !isGameOver();
+        return true;
     }
 
     public void onMovePlayed(int x, int y) {
