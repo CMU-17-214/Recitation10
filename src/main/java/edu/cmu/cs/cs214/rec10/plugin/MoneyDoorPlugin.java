@@ -16,7 +16,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     private GameFramework framework = null;
 
     // The amount of money each player has
-    public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
+    public Map<String, Integer> PlayerScores = new HashMap<String, Integer>();
 
     public String getGameName() {
         return new String("money door game");
