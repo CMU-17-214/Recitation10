@@ -73,7 +73,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isMoveValid(int x, int y) {
-        return this.move || !this.move;
+        return true;
     }
 
     public boolean isMoveOver() {
