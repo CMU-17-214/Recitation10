@@ -4,6 +4,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class SortWithSwapsPlugin implements GamePlugin {
     private int ONE = 1;
@@ -45,7 +46,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
         count = 0;
 
         // Make random permutation of the array
-        Random random = new Random();
+        ThreadLocalRandom random = new ThreadLocalRandom();
 
         int i;
         // For every position i, chooses a random position >= i and swaps it with the value at position i,
@@ -95,7 +96,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isGameOver() {
-//        System.out.println("here");
 
         // Checks that array is properly sorted
         for (int i = 0; i < 9; i++) {
