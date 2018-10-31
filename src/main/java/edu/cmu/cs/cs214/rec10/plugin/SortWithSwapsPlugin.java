@@ -25,7 +25,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     static Integer count = null;
 
     public String getGameName() {
-        return new String("sort with swaps plugin");
+        return "sort with swaps plugin";
     }
 
     public int getGridWidth() {
