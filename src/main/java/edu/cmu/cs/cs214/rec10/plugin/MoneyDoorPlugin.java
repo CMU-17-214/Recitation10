@@ -68,6 +68,9 @@ public class MoneyDoorPlugin implements GamePlugin {
         System.out.println("on new move");
     }
 
+    /**
+     * returns whether move is valid at given x and y position
+     */
     public boolean isMoveValid(int x, int y) {
         return framework.getSquare(x, 0) == "Door closed!";
     }
