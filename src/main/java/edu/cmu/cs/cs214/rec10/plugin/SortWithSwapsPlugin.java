@@ -44,9 +44,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     public void onNewGame() {
         // Reset count
         count = 0;
-
-        // Make random permutation of the array
-        ThreadLocalRandom random = new ThreadLocalRandom();
+        
 
         int i;
         // For every position i, chooses a random position >= i and swaps it with the value at position i,
@@ -55,7 +53,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
             int nextIndex;
 
             // Find an index at position >= i to swap to position i.
-            while ((nextIndex = random.nextInt(10)) < i);  // Chooses a random number in the range [i, 10)
+            while ((nextIndex = ThreadLocalRandom.current().nextInt(i, 10)) < i);  // Chooses a random number in the range [i, 10)
 
             // Swap positions i, nextIndex
             int temp = arr[i];

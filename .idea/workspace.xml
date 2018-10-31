@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc592ee6-c771-4ec8-a385-821eda1e6cf2" name="Default Changelist" comment="" />
+    <list default="true" id="bc592ee6-c771-4ec8-a385-821eda1e6cf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/cmu/cs/cs214/rec10/plugin/SortWithSwapsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/cmu/cs/cs214/rec10/plugin/SortWithSwapsPlugin.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,6 +43,16 @@
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="40" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="40" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -48,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/cmu/cs/cs214/rec10/plugin/SortWithSwapsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="182">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -431,6 +443,13 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/cmu/cs/cs214/rec10/plugin/SortWithSwapsPlugin.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="70" />
     <option name="y" value="23" />
@@ -526,6 +545,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="23" width="1341" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -563,8 +583,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/cmu/cs/cs214/rec10/plugin/SortWithSwapsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="182">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
         </state>
       </provider>
     </entry>
