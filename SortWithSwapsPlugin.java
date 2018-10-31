@@ -13,7 +13,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     public Boolean move = false;
 
     // An array of the numbers 1-10
-    private int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    private int[] one_to_ten_array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     // The game framework
     private GameFramework framework = null;
@@ -22,7 +22,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private int last = -1;
 
     //The number of swaps the user has made
-    static Integer count = null;
+    int count = null;
 
     public String getGameName() {
         return new String("sort with swaps plugin");
