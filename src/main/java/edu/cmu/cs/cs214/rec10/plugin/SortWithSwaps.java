@@ -83,7 +83,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
 
     public void onMovePlayed(int x, int y) {
         if (this.move) {
-            String temp = framework.getSquare(last, 0);
             framework.setSquare(last, 0, framework.getSquare(x, 0));
             framework.setSquare(x, 0, temp);
             count = count + 1;
