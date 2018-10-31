@@ -97,9 +97,9 @@ public class MoneyDoorPlugin implements GamePlugin {
 
     public String getGameOverMessage() {
         if (PlayerScores.get("X") > PlayerScores.get("O")) {
-            return "Congratulations X with a score of " + PlayerScores.get("X") + " !";
+            return "Congrats X with a score of " + PlayerScores.get("X") + " !";
         } else {
-            return "Congratulations O with a score of " + PlayerScores.get("O") + " !";
+            return "Congrats O with a score of " + PlayerScores.get("O") + " !";
         }
 
 
