@@ -6,8 +6,6 @@ import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 import java.util.Random;
 
 public class SortWithSwapsPlugin implements GamePlugin {
-    private int ONE = 1;
-    private int TEN = 10;
 
     // Describes whether the current move is over
     public Boolean move = false;
@@ -29,11 +27,11 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public int getGridWidth() {
-        return TEN;
+        return 10;
     }
 
     public int getGridHeight() {
-        return ONE;
+        return 1;
     }
 
     public void onRegister(GameFramework framework) {
