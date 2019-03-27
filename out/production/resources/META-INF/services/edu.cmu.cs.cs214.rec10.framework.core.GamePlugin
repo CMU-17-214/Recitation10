@@ -1,0 +1,8 @@
+#List of plugins to be registered by framework
+#Provide fully qualified class names here ( edu.cmu.cs.cs214.rec09.plugin.XXX )
+#Separate by new line.
+edu.cmu.cs.cs214.rec10.plugin.MemoryPlugin
+edu.cmu.cs.cs214.rec10.plugin.RpsPlugin
+edu.cmu.cs.cs214.rec10.plugin.TicTacToePlugin
+edu.cmu.cs.cs214.rec10.plugin.SortWithSwapsPlugin
+edu.cmu.cs.cs214.rec10.plugin.MoneyDoorPlugin
