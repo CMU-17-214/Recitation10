@@ -4,7 +4,9 @@ import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 import edu.cmu.cs.cs214.rec10.framework.core.Player;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Random;
+
 
 public class MoneyDoorPlugin implements GamePlugin {
 
@@ -101,8 +103,6 @@ public class MoneyDoorPlugin implements GamePlugin {
         } else {
             return "Congratulations O with a score of " + PlayerScores.get("O") + " !";
         }
-
-
     }
 
     public void onGameClosed() {
