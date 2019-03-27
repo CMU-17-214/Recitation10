@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
 
+//added comment
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::createAndStartFramework);
