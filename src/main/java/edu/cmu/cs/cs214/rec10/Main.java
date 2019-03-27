@@ -29,7 +29,7 @@ public class Main {
 
     /**
      * Load plugins listed in META-INF/services/...
-     *
+     * loading....
      * @return List of instantiated plugins
      */
     private static List<GamePlugin> loadPlugins() {
