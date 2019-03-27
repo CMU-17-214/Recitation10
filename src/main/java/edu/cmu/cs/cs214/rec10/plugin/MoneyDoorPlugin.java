@@ -101,8 +101,6 @@ public class MoneyDoorPlugin implements GamePlugin {
         } else {
             return "Congratulations O with a score of " + PlayerScores.get("O") + " !";
         }
-
-
     }
 
     public void onGameClosed() {
