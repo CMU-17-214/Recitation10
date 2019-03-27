@@ -1,4 +1,3 @@
-Brandon Dubner < Josh Broitman
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'eclipse'
