@@ -10,6 +10,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
 
+/**
+ * Main class for recitation
+ */
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::createAndStartFramework);
