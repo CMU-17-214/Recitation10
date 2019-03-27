@@ -6,7 +6,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 
 /**
- * An example Memory game plug-in.
+ * An example Memory game plug-in. FUN!
  */
 public class MemoryPlugin implements GamePlugin {
     private static String GAME_NAME = "Memory";
