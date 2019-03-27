@@ -63,6 +63,7 @@ public class SortWithSwaps implements GamePlugin {
             arr[nextIndex] = temp;
         }
 
+
         for(i = 0; i < 10; i++) {
             framework.setSquare(i, 0, Integer.toString(arr[i]));
         }
