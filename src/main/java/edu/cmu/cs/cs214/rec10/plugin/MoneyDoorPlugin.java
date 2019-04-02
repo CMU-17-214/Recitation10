@@ -11,6 +11,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
     private int ONE = 1;
     private int TEN = 10;
+    //tiny modify
 
     // The game framework
     private GameFramework framework = null;
