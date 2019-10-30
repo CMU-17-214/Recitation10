@@ -9,8 +9,8 @@ import java.util.*;
 public class MoneyDoorPlugin implements GamePlugin {
 
     private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
-    private int ONE = 1;
-    private int TEN = 10;
+    private int ONE = 50;
+    private int TEN = 500;
 
     // The game framework
     private GameFramework framework = null;
