@@ -8,15 +8,15 @@ import java.util.*;
 
 public class MoneyDoorPlugin implements GamePlugin {
 
-    private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
-    private int ONE = 1;
-    private int TEN = 10;
+    private final int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
+    private final int ONE = 1;
+    private final int TEN = 10;
 
     // The game framework
     private GameFramework framework = null;
 
     // The amount of money each player has
-    public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
+    public Map<String, Integer> PlayerScores = new HashMap<String, Integer>();
 
     public String getGameName() {
         return new String("money door game");
