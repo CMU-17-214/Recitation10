@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../recitation08/08" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/homework/2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/homework/3" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/homework/4" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/recitation/02" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/recitation/04" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/recitation/07" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../andrewh1/recitation/08" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="825" />
+    <option name="height" value="435" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+  </component>
+</project>
