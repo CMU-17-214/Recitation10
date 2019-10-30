@@ -7,7 +7,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.Player;
 /**
  * An example Tic-Tac-Toe game plug-in.
  */
-public class TicTacToePlugin implements GamePlugin {
+public class GraceTicTacToePlugin implements GamePlugin {
 
     private static final String GAME_NAME = "Tic-Tac-Toe";
 
