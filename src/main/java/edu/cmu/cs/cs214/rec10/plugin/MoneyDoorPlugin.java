@@ -4,8 +4,6 @@ import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 import edu.cmu.cs.cs214.rec10.framework.core.Player;
 
-import java.util.*;
-
 public class MoneyDoorPlugin implements GamePlugin {
 
     private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
@@ -16,7 +14,11 @@ public class MoneyDoorPlugin implements GamePlugin {
     private GameFramework framework = null;
 
     // The amount of money each player has
-    public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
+    private HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
+
+    public HashMap<String, Integer> getPlayerScores {
+        return PlayerScores;
+    }
 
     public String getGameName() {
         return new String("money door game");
@@ -91,7 +93,7 @@ public class MoneyDoorPlugin implements GamePlugin {
                 return false;
             }
         }
-//System.out.println("game is over");
+
         return true;
     }
 
