@@ -9,7 +9,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.Player;
  */
 public class TicTacToePlugin implements GamePlugin {
 
-    private static final String GAME_NAME = "Tic-Tac-Toe";
+    private static final String GAME_NAME = "Matt's Tic-Tac-Toe";
 
     private static final int GRID_SIZE = 3;
 
