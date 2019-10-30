@@ -69,7 +69,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     }
 
     public boolean isMoveValid(int x, int y) {
-        return framework.getSquare(x, 0) == "Door closed!";
+        return framework.getSquare(x, 0).equals("Door closed!");
     }
 
     @Override
