@@ -25,7 +25,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     static Integer count = null;
 
     public String getGameName() {
-        return new String("sort with swaps plugin");
+        return "sort with swaps plugin";
     }
 
     public int getGridWidth() {
@@ -73,7 +73,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isMoveValid(int x, int y) {
-        return this.move || !this.move;
+        return true;
     }
 
     public boolean isMoveOver() {
@@ -99,7 +99,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
 
         // Checks that array is properly sorted
         for (int i = 0; i < 9; i++) {
-            Integer j = Integer.parseInt(framework.getSquare(i+1, 0));
+            int j = Integer.parseInt(framework.getSquare(i+1, 0));
             if (j < Integer.parseInt(framework.getSquare(i, 0))) {
                 return false;
             }
