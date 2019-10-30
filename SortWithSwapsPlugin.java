@@ -22,7 +22,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private int last = -1;
 
     //The number of swaps the user has made
-    static Integer count = null;
+    private static int count = null;
 
     public String getGameName() {
         return new String("sort with swaps plugin");
