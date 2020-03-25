@@ -131,5 +131,6 @@ public class MemoryPlugin implements GamePlugin {
 
 	@Override
 	public void onGameClosed() {
+        System.out.println("closed :(");
 	}
 }
