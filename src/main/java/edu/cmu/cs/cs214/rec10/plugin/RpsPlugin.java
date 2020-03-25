@@ -100,5 +100,6 @@ public class RpsPlugin implements GamePlugin {
 
 	@Override
 	public void onGameClosed() {
+		// mock a change
 	}
 }
