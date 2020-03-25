@@ -6,6 +6,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.Player;
 
 import java.util.*;
 
+// print ('hello world')
 public class MoneyDoorPlugin implements GamePlugin {
 
     private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
