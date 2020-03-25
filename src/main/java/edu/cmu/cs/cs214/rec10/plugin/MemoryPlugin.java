@@ -1,135 +1,111 @@
 package edu.cmu.cs.cs214.rec10.plugin;
 
-import java.util.*;
-
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
+import edu.cmu.cs.cs214.rec10.framework.core.Player;
 
-/**
- * An example Memory game plug-in.
- */
-public class MemoryPlugin implements GamePlugin {
-    private static String GAME_NAME = "Memory";
+import java.util.*;
 
-    // Invariant: GRID_WIDTH * GRID_HEIGHT % 2 == 0.
-    private static int GRID_WIDTH = 4;
-    private static int GRID_HEIGHT = 4;
+public class MoneyDoorPlugin implements GamePlugin {
 
-    // Invariant: 2 * WORDS.length == GRID_HEIGHT * GRID_WIDTH.
-    private static String[] WORDS =
-            { "Apple", "Boat", "Car", "Dog", "Eagle", "Fish", "Giraffe", "Helicopter" };
+    private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
+    private int ONE = 1;
+    private int TEN = 10;
 
-    private static String SELECT_FIRST_CARD_MSG = "Select first card.";
-    private static String SELECT_SECOND_CARD_MSG = "Select second card.";
-    private static String MATCH_FOUND_MSG = "You found a match!";
-    private static String MATCH_NOT_FOUND_MSG = "Match not found.";
-    private static String PLAYER_WON_MSG = "All pairs found, %s won the game!";
+    // The game framework
+    private GameFramework framework = null;
 
-    private GameFramework framework;
-    private ArrayList<String> cards = new ArrayList<String>();
-    private int firstFaceUpX, firstFaceUpY;
-    private int secondFaceUpX, secondFaceUpY;
-    private boolean lastMatch;
-    private int clickCounter;
-    private int numCardsFaceDown;
-
-    // The cards at all locations. (Does not track the face-up / face down status.)
-    private String internalGameGrid[][] = new String[GRID_HEIGHT][GRID_WIDTH];
+    // The amount of money each player has
+    public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
 
     public String getGameName() {
-        return GAME_NAME;
+        return new String("money door game");
     }
 
     public int getGridWidth() {
-        return GRID_WIDTH;
+        return TEN;
     }
 
     public int getGridHeight() {
-        return GRID_HEIGHT;
+        return ONE;
     }
 
-    public void onRegister(GameFramework f) {
-        framework = f;
-        for (String word : WORDS) {
-            cards.add(word);
-            cards.add(word);
+    public void onRegister(GameFramework fwk) {
+        this.framework = fwk;
+    }
+
+    public void onNewGame() {
+        // Make random permutation of the array
+        Random random = new Random();
+
+        int i;
+        // For every position i, chooses a random position >= i and swaps it with the value at position i,
+        // generating a random permutation of arr
+        for(i = 0; i < 10; i++) {
+            int nextIndex;
+
+            // Find an index at position >= i to swap to position i
+            while ((nextIndex = random.nextInt(10)) < i);  // choosing a random number in the range [i, 10).
+
+            // Swap positions i, nextIndex
+            int temp = arr[i];
+            arr[i] = arr[nextIndex];
+            arr[nextIndex] = temp;
         }
+
+        // Set all doors to initially be closed
+        for(i = 0; i < 10; i++) {
+            framework.setSquare(i, 0, "Door closed!");
+        }
+
+        // Fill the scores with initial scores for each player.
+        PlayerScores.clear();
+        PlayerScores.put("O", 0);
+        PlayerScores.put("X", 0);
+    }
+
+    public void onNewMove() {
+        System.out.println("on new move");
+    }
+
+    public boolean isMoveValid(int x, int y) {
+        return framework.getSquare(x, 0) == "Door closed!";
     }
 
     @Override
-    public void onNewGame(){
-        Collections.shuffle(cards);
-        Iterator<String> it = cards.iterator();
-        for(int y = 0; y < GRID_HEIGHT; y++) {
-            for (int x =0; x < GRID_WIDTH; x++) {
-                internalGameGrid[y][x] = it.next();
+    public boolean isMoveOver() {
+        return isGameOver() || !isGameOver();
+    }
+
+    public void onMovePlayed(int x, int y) {
+        int money = arr[x];
+        PlayerScores.put(framework.getCurrentPlayer().getName(),
+            PlayerScores.get(framework.getCurrentPlayer().getName()) + money);
+        framework.setSquare(x, y, Integer.toString(money));
+    }
+
+    public boolean isGameOver() {
+        //Iterate through the grid and see if any doors are still opened.
+        for(int i = 0;i < 10;i++) {
+            if (framework.getSquare(i, 0) == "Door closed!") {
+                return false;
             }
         }
-        numCardsFaceDown = GRID_HEIGHT * GRID_WIDTH;
+//System.out.println("game is over");
+        return true;
     }
 
-    @Override
-    public void onNewMove() {
-        clickCounter = 0;
-        framework.setFooterText(SELECT_FIRST_CARD_MSG);
-    }
-
-    @Override
-    public boolean isMoveValid(int x, int y){
-        return framework.getSquare(x, y) == null;
-    }
-
-    @Override
-    public boolean isMoveOver(){
-        return clickCounter > 1;
-    }
-
-    @Override
-    public void onMovePlayed(int x, int y) {
-        switch(clickCounter) {
-            case 0:
-                if (!lastMatch) {
-                    framework.setSquare(firstFaceUpX,  firstFaceUpY,  null);
-                    framework.setSquare(secondFaceUpX, secondFaceUpY, null);
-                }
-                framework.setSquare(x, y, internalGameGrid[y][x]);
-                firstFaceUpX = x;
-                firstFaceUpY = y;
-                framework.setFooterText(SELECT_SECOND_CARD_MSG);
-                break;
-            case 1:
-                framework.setSquare(x, y, internalGameGrid[y][x]);
-                secondFaceUpX = x;
-                secondFaceUpY = y;
-                framework.setFooterText(isMatch() ? MATCH_FOUND_MSG : MATCH_NOT_FOUND_MSG);
-                break;
-            default:
-                throw new AssertionError("Bad click counter value: " + clickCounter);
-        }
-        clickCounter++;
-    }
-
-    /** Side effects: sets lastMatch, updates numCovered */
-    private boolean isMatch() {
-        String card1 = internalGameGrid[firstFaceUpY][firstFaceUpX];
-        String card2 = internalGameGrid[secondFaceUpY][secondFaceUpX];
-        if (lastMatch = card1.equals(card2)) {
-            numCardsFaceDown -= 2;
-        }
-        return lastMatch;
-    }
-
-    @Override
-    public boolean isGameOver() {
-        return numCardsFaceDown == 0;
-    }
-
-    @Override
     public String getGameOverMessage() {
-        return String.format(PLAYER_WON_MSG, framework.getCurrentPlayer().getName());
+        if (PlayerScores.get("X") > PlayerScores.get("O")) {
+            return "Congratulations X with a score of " + PlayerScores.get("X") + " !";
+        } else {
+            return "Congratulations O with a score of " + PlayerScores.get("O") + " !";
+        }
+
+
     }
 
-	@Override
-	public void onGameClosed() {
-	}
+    public void onGameClosed() {
+        System.out.println("closed :(");
+    }
 }
