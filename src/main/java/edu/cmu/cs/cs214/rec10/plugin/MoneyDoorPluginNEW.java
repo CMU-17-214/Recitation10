@@ -2,13 +2,12 @@ package edu.cmu.cs.cs214.rec10.plugin;
 
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
-import edu.cmu.cs.cs214.rec10.framework.core.Player;
 
 import java.util.*;
 
 public class MoneyDoorPluginNEW implements GamePlugin {
 
-    private int[] arr = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
+    private int[] array = {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6};
     private int ONE = 1;
     private int TEN = 10;
 
@@ -48,9 +47,9 @@ public class MoneyDoorPluginNEW implements GamePlugin {
             while ((nextIndex = random.nextInt(10)) < i);  // choosing a random number in the range [i, 10).
 
             // Swap positions i, nextIndex
-            int temp = arr[i];
-            arr[i] = arr[nextIndex];
-            arr[nextIndex] = temp;
+            int temp = array[i];
+            array[i] = array[nextIndex];
+            array[nextIndex] = temp;
         }
 
         // Set all doors to initially be closed
@@ -78,7 +77,7 @@ public class MoneyDoorPluginNEW implements GamePlugin {
     }
 
     public void onMovePlayed(int x, int y) {
-        int money = arr[x];
+        int money = array[x];
         PlayerScores.put(framework.getCurrentPlayer().getName(),
                 PlayerScores.get(framework.getCurrentPlayer().getName()) + money);
         framework.setSquare(x, y, Integer.toString(money));
