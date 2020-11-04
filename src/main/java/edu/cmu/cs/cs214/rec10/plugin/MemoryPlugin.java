@@ -9,6 +9,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
  * An example Memory game plug-in.
  */
 public class MemoryPlugin implements GamePlugin {
+    String s = "test";
     private static String GAME_NAME = "Memory";
 
     // Invariant: GRID_WIDTH * GRID_HEIGHT % 2 == 0.
