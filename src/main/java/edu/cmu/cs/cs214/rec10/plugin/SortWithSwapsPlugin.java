@@ -2,7 +2,6 @@ package edu.cmu.cs.cs214.rec10.plugin;
 
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
-
 import java.util.Random;
 
 public class SortWithSwapsPlugin implements GamePlugin {
@@ -10,7 +9,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private int TEN = 10;
 
     // Describes whether the current move is over
-    public Boolean move = false;
+    private  boolean move = false;
 
     // An array of the numbers 1-10
     private int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
