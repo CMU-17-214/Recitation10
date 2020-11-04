@@ -10,9 +10,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
 
-public class Main {
+public class StartGame {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::createAndStartFramework);
+        SwingUtilities.invokeLater(StartGame::createAndStartFramework);
     }
 
     private static void createAndStartFramework() {
