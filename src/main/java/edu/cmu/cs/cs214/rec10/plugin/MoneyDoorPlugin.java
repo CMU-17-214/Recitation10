@@ -19,7 +19,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
 
     public String getGameName() {
-        return new String("MONEY DOOR GAME");
+        return new String("money door game");
     }
 
     public int getGridWidth() {
@@ -80,7 +80,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     public void onMovePlayed(int x, int y) {
         int money = arr[x];
         PlayerScores.put(framework.getCurrentPlayer().getName(),
-                PlayerScores.get(framework.getCurrentPlayer().getName()) + money);
+            PlayerScores.get(framework.getCurrentPlayer().getName()) + money);
         framework.setSquare(x, y, Integer.toString(money));
     }
 
