@@ -115,4 +115,9 @@ public class SortWithSwapsPlugin implements GamePlugin {
     public void onGameClosed() {
         System.out.println(move);
     }
+
+    @Override
+    public String toString() {
+        return "hello world";
+    }
 }
