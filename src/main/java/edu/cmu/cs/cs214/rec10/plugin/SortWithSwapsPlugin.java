@@ -28,10 +28,13 @@ public class SortWithSwapsPlugin implements GamePlugin {
         return new String("sort with swaps plugin");
     }
 
+    /**
+     * @return the grid width
+     */
     public int getGridWidth() {
         return TEN;
     }
-
+    
     public int getGridHeight() {
         return ONE;
     }
