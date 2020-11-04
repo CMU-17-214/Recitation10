@@ -19,7 +19,7 @@ public class MoneyDoorPlugin implements GamePlugin {
     public HashMap<String, Integer> PlayerScores = new HashMap<String, Integer>();
 
     public String getGameName() {
-        return new String("money door game");
+        return new String("MONEY DOOR GAME");
     }
 
     public int getGridWidth() {
