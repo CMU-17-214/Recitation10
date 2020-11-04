@@ -108,4 +108,9 @@ public class MoneyDoorPlugin implements GamePlugin {
     public void onGameClosed() {
         System.out.println("closed :(");
     }
+
+    @OVerride 
+    public String toString() {
+        return "Money door game";
+    }
 }
