@@ -6,7 +6,7 @@ import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 
 /**
- * An example Rock Paper Scissors game plug-in.
+ * An example Rock Paper Scissors game
  */
 public class RpsPlugin implements GamePlugin {
 
