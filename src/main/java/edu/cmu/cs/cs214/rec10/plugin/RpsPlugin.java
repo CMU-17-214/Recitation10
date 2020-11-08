@@ -1,9 +1,9 @@
 package edu.cmu.cs.cs214.rec10.plugin;
 
-import java.util.Random;
-
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
+
+import java.util.Random;
 
 /**
  * An example Rock Paper Scissors game plug-in.
@@ -22,12 +22,10 @@ public class RpsPlugin implements GamePlugin {
     private static final int ROCK_INDEX = 0;
     private static final int PAPER_INDEX = 1;
     private static final int SCISSORS_INDEX = 2;
-
+    private final Random rand = new Random();
     private GameFramework framework;
     private int computerSelection;
     private int playerSelection;
-
-    private final Random rand = new Random();
 
     @Override
     public String getGameName() {
@@ -88,17 +86,17 @@ public class RpsPlugin implements GamePlugin {
     @Override
     public String getGameOverMessage() {
         return computerSelection == playerSelection ? GAME_TIED_MSG
-             : hasPlayerWon() ? String.format(PLAYER_WON_MSG, framework.getCurrentPlayer().getName())
-             : COMPUTER_WON_MSG;
+                : hasPlayerWon() ? String.format(PLAYER_WON_MSG, framework.getCurrentPlayer().getName())
+                : COMPUTER_WON_MSG;
     }
 
     private boolean hasPlayerWon() {
         return (playerSelection == PAPER_INDEX && computerSelection == ROCK_INDEX)
-            || (playerSelection == ROCK_INDEX  && computerSelection == SCISSORS_INDEX)
-            || (playerSelection == SCISSORS_INDEX && computerSelection == PAPER_INDEX);
+                || (playerSelection == ROCK_INDEX && computerSelection == SCISSORS_INDEX)
+                || (playerSelection == SCISSORS_INDEX && computerSelection == PAPER_INDEX);
     }
 
-	@Override
-	public void onGameClosed() {
-	}
+    @Override
+    public void onGameClosed() {
+    }
 }
