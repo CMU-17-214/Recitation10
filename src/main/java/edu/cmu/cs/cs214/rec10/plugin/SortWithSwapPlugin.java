@@ -116,3 +116,5 @@ public class SortWithSwapsPlugin implements GamePlugin {
         System.out.println(move);
     }
 }
+
+//this is a random comment to check the git commit stuff
