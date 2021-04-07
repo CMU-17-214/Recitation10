@@ -1,5 +1,4 @@
-package edu.cmu.cs.cs214.rec10.framework.core;
-//package edu.cmu.cs.cs214.rec10.plugin;
+package edu.cmu.cs.cs214.rec10.plugin;
 
 import edu.cmu.cs.cs214.rec10.framework.core.GameFramework;
 import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
