@@ -41,7 +41,7 @@ public class MoneyDoorPlugin implements GamePlugin {
         int i;
         // For every position i, chooses a random position >= i and swaps it with the value at position i,
         // generating a random permutation of arr
-        for(i = 0; i < 10; i++) {
+        for(i = 0; i < TEN; i++) {
             int nextIndex;
 
             // Find an index at position >= i to swap to position i
@@ -54,7 +54,7 @@ public class MoneyDoorPlugin implements GamePlugin {
         }
 
         // Set all doors to initially be closed
-        for(i = 0; i < 10; i++) {
+        for(i = 0; i < TEN; i++) {
             framework.setSquare(i, 0, "Door closed!");
         }
 
@@ -86,7 +86,7 @@ public class MoneyDoorPlugin implements GamePlugin {
 
     public boolean isGameOver() {
         //Iterate through the grid and see if any doors are still opened.
-        for(int i = 0;i < 10;i++) {
+        for(int i = 0;i < TEN;i++) {
             if (framework.getSquare(i, 0) == "Door closed!") {
                 return false;
             }
