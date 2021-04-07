@@ -95,7 +95,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isGameOver() {
-//        System.out.println("here");
 
         // Checks that array is properly sorted
         for (int i = 0; i < 9; i++) {
@@ -109,7 +108,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public String getGameOverMessage() {
-        return "you did it in" + count + "moves!";
+        return "You did it in" + count + "moves!!!!:)";
     }
 
     public void onGameClosed() {
