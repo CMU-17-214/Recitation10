@@ -23,7 +23,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     private int last = -1;
 
     //The number of swaps the user has made
-    static Integer count = null;
+    static Integer countNum = null;
 
     public String getGameName() {
         return new String("sort with swaps plugin");
@@ -43,7 +43,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
 
     public void onNewGame() {
         // Reset count
-        count = 0;
+        countNum = 0;
 
         // Make random permutation of the array
         Random random = new Random();
@@ -87,7 +87,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
             String temp = framework.getSquare(last, 0);
             framework.setSquare(last, 0, framework.getSquare(x, 0));
             framework.setSquare(x, 0, temp);
-            count = count + 1;
+            countNum = countNum + 1;
         } else {
             last = x;
         }
@@ -110,7 +110,7 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public String getGameOverMessage() {
-        return "you did it in" + count + "moves!";
+        return "you did it in" + countNum + "moves!";
     }
 
     public void onGameClosed() {
