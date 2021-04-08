@@ -6,8 +6,8 @@ import edu.cmu.cs.cs214.rec10.framework.core.GamePlugin;
 import java.util.Random;
 
 public class SortWithSwapsPlugin implements GamePlugin {
-    private int ONE = 1;
-    private int TEN = 10;
+    private final int ONE = 1;
+    private final int TEN = 10;
 
     // Describes whether the current move is over
     public Boolean move = false;
@@ -95,7 +95,6 @@ public class SortWithSwapsPlugin implements GamePlugin {
     }
 
     public boolean isGameOver() {
-//        System.out.println("here");
 
         // Checks that array is properly sorted
         for (int i = 0; i < 9; i++) {
