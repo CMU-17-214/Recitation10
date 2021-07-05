@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
 
+//added comment
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::createAndStartFramework);
@@ -29,7 +30,7 @@ public class Main {
 
     /**
      * Load plugins listed in META-INF/services/...
-     *
+     * loading....
      * @return List of instantiated plugins
      */
     private static List<GamePlugin> loadPlugins() {
